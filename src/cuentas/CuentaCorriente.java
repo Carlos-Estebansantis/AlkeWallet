@@ -1,6 +1,6 @@
-package cuenta;
+package cuentas;
 
-public class CuentaCorriente extends cuenta {
+public class CuentaCorriente extends Cuenta {
 private double limiteSobregiro;
 
 public CuentaCorriente(double saldoInicial, double limiteSobregiro) {
@@ -9,7 +9,7 @@ public CuentaCorriente(double saldoInicial, double limiteSobregiro) {
 }
 @Override
 public void retirar(double cantidad) {
-  if (cantidad <= (super.consultarSaldo() + limiteSobregiro)) {
+  if (cantidad <= (super.consultaSaldo() + limiteSobregiro)) {
 	   super.retirar(cantidad);
   }else {
 	  System.out.println("No puede retirar, Excede el limite de sobregiro");

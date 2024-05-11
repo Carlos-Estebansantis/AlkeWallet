@@ -1,19 +1,20 @@
-package cuenta;
+package cuentas;
 
-public class cuenta  implements CuentaBancaria {
-private double saldo;
+public class Cuenta  implements CuentaBancaria {
+
+	private double saldo;
 
 // construtor de saldo 
-public cuenta(double saldoInicial) {
+public Cuenta(double saldoInicial) {
 	this.saldo = saldoInicial;
 }
 
 // funcion @Override para llamar a los metodos 
-@override
+@Override
 public void depositar(double cantidad) {
 	saldo += cantidad;
-}
-@override
+     }
+@Override
 public void retirar(double cantidad) {
 	if (cantidad <= saldo) {
 		saldo-= cantidad;
@@ -21,7 +22,7 @@ public void retirar(double cantidad) {
 		System.out.println(" saldo Isuficiente ");
 		}
     }
-@override
+ @Override
 public double consultaSaldo() {
 	return saldo;
 }
